@@ -2,7 +2,7 @@
 
 # Download and install Hyperledger Fabric binaries
 echo "Downloading Hyperledger Fabric binaries..."
-curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.5.4 1.5.7
+curl -sSL https://bit.ly/2ysbOFE | bash -s -- 3.1.3 2.5.13
 
 # Export PATH
 export PATH=${PWD}/bin:$PATH

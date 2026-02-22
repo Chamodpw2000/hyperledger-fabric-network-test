@@ -1,6 +1,32 @@
-# Hyperledger Fabric Blockchain Network
+# Hyperledger Fabric v3.1.3 Blockchain Network
 
-A complete Hyperledger Fabric blockchain network setup from scratch with a sample asset management chaincode.
+A complete Hyperledger Fabric v3.1.3 blockchain network setup from scratch with a sample asset management chaincode.
+
+**🚀 Updated for Fabric v3.1.3 (Latest Version)**
+- **Enhanced Performance**: New chaincode write/read batching capabilities
+- **Byzantine Fault Tolerance (BFT)**: SmartBFT consensus available
+- **Ed25519 Support**: Modern cryptographic algorithm support
+- **V3_0 Capabilities**: Latest channel capabilities enabled
+- **Direct Block Delivery**: Optimized peer-to-orderer communication
+
+## Fabric v3.1.3 New Features
+
+This network leverages the latest Hyperledger Fabric v3.1.3 features:
+
+### Performance Improvements
+- **Write Batching**: Chaincodes can batch multiple key writes for better performance
+- **Read Batching**: New `GetMultipleStates()` and `GetMultiplePrivateData()` functions  
+- **Composite Key Queries**: `GetAllStatesCompositeKeyWithPagination()` for bulk operations
+
+### Enhanced Security & Consensus
+- **BFT Ordering Service**: SmartBFT Byzantine Fault Tolerant consensus available
+- **Ed25519 Support**: Modern elliptic curve cryptography
+- **Direct Block Delivery**: Peers receive blocks directly from orderers (gossip disabled)
+
+### Breaking Changes from v2.x
+- **System Channel Removed**: No longer uses system channels (✅ our network is compatible)
+- **Legacy Chaincode Lifecycle Removed**: Uses modern v2.x lifecycle only
+- **fabric-tools Image Deprecated**: Uses published binaries instead
 
 ## Network Architecture
 
@@ -20,9 +46,14 @@ Ensure you have the following installed:
 
 - **Docker** (v20.10+)
 - **Docker Compose** (v1.28+)
-- **Go** (v1.19+) - for chaincode development
-- **Node.js** (v16+) - optional, for client applications
+- **Go** (v1.22+) - for chaincode development
+- **Node.js** (v18+) - optional, for client applications
 - **jq** - for JSON parsing in scripts
+
+**Updated Dependencies for Fabric v3.1.3:**
+- Go 1.25.2 (latest tested version)
+- CouchDB v3.4.2
+- Ubuntu 24.04 base images
 
 ## Quick Start
 
